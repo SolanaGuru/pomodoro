@@ -1,0 +1,72 @@
+@import 'variables';
+@import 'animations';
+@import 'scrollbar';
+@import 'slider';
+@import 'base';
+@import "icons";
+
+:root {
+  --el-bg-color-overlay: var(--color-background-lightest);
+  --el-border-color: var(--color-background-lightest);
+  --el-border-color-light: var(--color-background-lightest);
+  --el-text-color-regular: var(--color-foreground);
+  //--el-color-primary: var(--color-accent);
+
+}
+.Modal {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  .content {
+    width: 400px;
+    margin: 50px auto 0;
+    border-radius: 5px;
+    background-color: var(--color-background-light);
+  }
+  .modal-back {
+    width: calc(100vw);
+    height: calc(100vh);
+    background: rgba(0,0,0,.3);
+    position: absolute;
+    top: 0;
+    z-index: -1;
+  }
+}
+
+table, th, td, tr, {
+  background-color: transparent!important;
+}
+.el-table {
+  color: var(--color-foreground-darkest);
+  --el-table-header-text-color: var(--color-foreground-darkest);
+  --el-table-border-color: var(--color-background);
+  .el-table__inner-wrapper::before {
+    display: none;
+  }
+}
+
+.el-input {
+  --el-select-input-focus-border-color: var(--color-accent);
+  --el-input-text-color: var(--color-foreground);
+  .el-input__wrapper.is-focus {
+    box-shadow: 0 0 0 1px var(--color-accent) inset!important;
+  }
+  .el-input__wrapper {
+    background: none ;
+    box-shadow: 0 0 0 1px var(--color-background-lightest) inset;
+
+  }
+}
+
+.el-popper__arrow:before {
+  background: var(--color-background);
+}
+
+
+.el-select__popper.el-popper {
+  background: none;
+}
+.el-select-dropdown__item.selected {
+  color: var(--color-accent);
+}

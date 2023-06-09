@@ -1,0 +1,29 @@
+.Icon-wrapper {
+  &:hover svg path {
+    fill: var(--color-accent);
+  }
+  .Icon--task {
+    & path {
+      // transition: $transitionDefault;
+    }
+  }
+  &:hover .Icon--task path {
+    fill: var(--color-accent);
+  }
+
+  &:hover .Icon--skip polygon,
+  &:hover .Icon--skip rect {
+    fill: var(--color-accent);
+  }
+
+  &:hover .Icon--setting path {
+    fill: var(--color-accent);
+  }
+  .Icon--skip {
+    & polygon,
+    & rect {
+       transition: $transitionDefault;
+    }
+  }
+}
+
